@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
         session[:user_id] = user.id
         redirect_to "/ideas"
     else
-        flash[:login_errors] = 'Invalid shit.'
+        flash[:login_errors] = 'Invalid credentials.'
         redirect_to '/'
     end
   end
