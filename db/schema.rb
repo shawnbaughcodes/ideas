@@ -41,13 +41,9 @@ ActiveRecord::Schema.define(version: 20170620145947) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.integer  "user_id"
   end
-
-  add_index "users", ["user_id"], name: "index_users_on_user_id", using: :btree
 
   add_foreign_key "ideas", "users"
   add_foreign_key "likes", "ideas"
   add_foreign_key "likes", "users"
-  add_foreign_key "users", "users"
 end
